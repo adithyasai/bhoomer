@@ -1,0 +1,541 @@
+/* Global Styles */
+:root {
+    --primary-color: #4682B4;
+    --secondary-color: #1bb736;
+    --accent-color: #4299e1;
+    --light-color: #f7fafc;
+    --dark-color: #2d3748;
+    --text-color: #444444;
+    --border-color: #e2e8f0;
+    --transition: all 0.3s ease;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  body {
+    background-color: #ffffff;
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  
+  button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-family: inherit;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  .hidden {
+    display: none !important;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: white;
+    padding: 1.5rem 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-button {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--dark-color);
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    transition: var(--transition);
+  }
+  
+  .nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: var(--primary-color);
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(to bottom right, white, #ebf8ff);
+    padding: 5rem 1.5rem;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  .hero-content {
+    max-width: 32rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .logo {
+    height: 6rem;
+  }
+  
+  @media (min-width: 768px) {
+    .logo {
+      height: 7rem;
+    }
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .hero-title {
+      font-size: 3rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .hero-title {
+      font-size: 3.5rem;
+    }
+  }
+  
+  .green-text {
+    color: var(--secondary-color);
+  }
+  
+  .blue-text {
+    color: var(--primary-color);
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .hero-subtitle {
+      font-size: 1.5rem;
+    }
+  }
+  
+  .cta-container {
+    margin-top: 1.5rem;
+  }
+  
+  .cta-button {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    transition: var(--transition);
+  }
+  
+  .cta-button:hover {
+    background-color: #3a6d96;
+  }
+  
+  .cta-text {
+    margin-top: 0.75rem;
+    font-size: 0.875rem;
+    color: var(--text-color);
+  }
+  
+  /* CTA Section */
+  .cta-section {
+    background-color: #ebf8ff;
+    padding: 4rem 1.5rem;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .section-title {
+      font-size: 2.5rem;
+    }
+  }
+  
+  .section-text {
+    max-width: 32rem;
+    margin: 0 auto;
+    font-size: 1.125rem;
+    color: var(--text-color);
+  }
+  
+  @media (min-width: 768px) {
+    .section-text {
+      font-size: 1.25rem;
+    }
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: var(--light-color);
+    padding: 2.5rem 1.5rem;
+    border-top: 1px solid var(--border-color);
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  
+  .footer-heading {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+  
+  .footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .footer-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #4a5568;
+    transition: var(--transition);
+  }
+  
+  .footer-link:hover {
+    color: var(--primary-color);
+  }
+  
+  .footer-copyright {
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    font-size: 0.875rem;
+    color: #718096;
+  }
+  
+  /* Dialog */
+  .dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+  }
+  
+  .dialog-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .dialog {
+    background-color: white;
+    border-radius: 0.5rem;
+    width: 90%;
+    max-width: 42rem;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .dialog-header {
+    padding: 1.5rem 1.5rem 1rem;
+    position: relative;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .dialog-header h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .dialog-header p {
+    font-size: 0.875rem;
+    color: #718096;
+    margin-top: 0.25rem;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: #718096;
+    transition: var(--transition);
+  }
+  
+  .close-button:hover {
+    color: #2d3748;
+  }
+  
+  .dialog-body {
+    padding: 1.5rem;
+  }
+  
+  /* Options Container */
+  .options-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+  
+  @media (min-width: 640px) {
+    .options-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .option-card {
+    border-radius: 0.375rem;
+    padding: 1.5rem;
+    background-color: white;
+    border: 1px solid var(--border-color);
+    height: 100%;
+    min-height: 12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .option-card:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  .seeker-card {
+    background-color: var(--primary-color);
+    color: white;
+    cursor: default;
+  }
+  
+  .full-card-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .option-icon-container {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 9999px;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+  }
+  
+  .seeker-card .option-icon-container {
+    background-color: white;
+    color: var(--primary-color);
+  }
+  
+  .option-icon-container i {
+    color: white;
+  }
+  
+  .seeker-card .option-icon-container i {
+    color: var(--primary-color);
+  }
+  
+  .option-card h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .option-card p {
+    font-size: 0.875rem;
+    color: #666;
+  }
+  
+  .seeker-card p {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Forms */
+  .dialog-form {
+    padding: 1rem 0;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    transition: var(--transition);
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(70, 130, 180, 0.2);
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    min-height: 5rem;
+  }
+  
+  .form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .back-button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    transition: var(--transition);
+  }
+  
+  .back-button:hover {
+    background-color: #f1f5f9;
+  }
+  
+  .submit-button {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    transition: var(--transition);
+  }
+  
+  .submit-button:hover {
+    background-color: #3a6d96;
+  }
+  
+  /* Thank You Message */
+  .thank-you {
+    text-align: center;
+    padding: 2.5rem 1rem;
+  }
+  
+  .thank-you h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .thank-you p {
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+  }
+  
+  .close-button-centered {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 0.375rem;
+    transition: var(--transition);
+  }
+  
+  .close-button-centered:hover {
+    background-color: #3a6d96;
+  }
+  
+  /* Toast Notification */
+  .toast {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    background-color: white;
+    border-radius: 0.375rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    max-width: 24rem;
+    width: auto;
+    z-index: 50;
+    overflow: hidden;
+    transition: var(--transition);
+  }
+  
+  .toast.fade-out {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  
+  .toast-content {
+    padding: 1rem;
+  }
+  
+  .toast-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #1a202c;
+  }
+  
+  .toast-message {
+    font-size: 0.875rem;
+    color: #4a5568;
+    margin-top: 0.25rem;
+  }  
