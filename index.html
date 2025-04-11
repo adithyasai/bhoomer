@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhoomer - Experience Real Estate</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-content">
+        <div>
+          <button class="nav-button" onclick="scrollToHero()">Home</button>
+        </div>
+        <div>
+          <a href="https://www.instagram.com/bhoomerindia?igsh=MTRoZWE5eGNtM3lmZw==" target="_blank" class="nav-button">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section id="hero-section" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="logo-container">
+            <img src="logo.png" alt="Bhoomer Logo" class="logo">
+          </div>
+          <h1 class="hero-title">
+            <span class="green-text">Defining</span>
+            <br>
+            <span class="blue-text">Experience Real Estate</span>
+          </h1>
+          <p class="hero-subtitle">
+            First Stop : HYDERABAD - Launching Soon
+          </p>
+          <div class="cta-container">
+            <button class="cta-button" onclick="openDialog()">Privilege List</button>
+            <p class="cta-text">
+              Join our privilege list to be among the first to experience Bhoomer
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <h2 class="section-title">What is Bhoomer?</h2>
+        <p class="section-text">
+          Bhoomer is an on-demand platform for effortless real estate scouting. From renting to buying your dream home or land, 
+          we simplify the process with convenience, networking, and a seamless experience.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-links">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-list">
+            <li>
+              <button onclick="scrollToHero()" class="footer-link">Home</button>
+            </li>
+            <li>
+              <button onclick="openDialog()" class="footer-link">Privilege List</button>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h3 class="footer-heading">Contact</h3>
+          <ul class="footer-list">
+            <li>
+              <a href="https://www.instagram.com/bhoomerindia?igsh=MTRoZWE5eGNtM3lmZw==" target="_blank" rel="noopener noreferrer" class="footer-link">
+                <i class="fab fa-instagram"></i>
+                <span>@bhoomerindia</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-copyright">
+        <p>© 2025 Bhoomer Digital Solutions Pvt Ltd</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Dialog Overlay -->
+  <div id="dialog-overlay" class="dialog-overlay">
+    <div id="dialog-content" class="dialog">
+      <div class="dialog-header">
+        <h2 id="dialog-title">Choose an option to join our privilege list</h2>
+        <p id="dialog-description">Select the option that best describes your real estate needs</p>
+        <button class="close-button" onclick="closeDialog()">&times;</button>
+      </div>
+      <div id="dialog-body" class="dialog-body">
+        <!-- Initial Options -->
+        <div id="options-container" class="options-container">
+          <div class="option-card" onclick="showForm('propertyOwner')">
+            <div class="option-icon-container">
+              <i class="fas fa-home"></i>
+            </div>
+            <h3>Property Owner</h3>
+            <p>List and manage your properties with Bhoomer</p>
+          </div>
+          <div class="option-card seeker-card">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfIsSWWq0dVJH1_bctLTijAnKAivCrODPUNb10P9StW3aCGVA/viewform?usp=dialog" target="_blank" class="full-card-link">
+              <div class="option-icon-container">
+                <i class="fas fa-building"></i>
+              </div>
+              <h3>Property Seeker</h3>
+              <p>Find your ideal property with our advanced search tools</p>
+            </a>
+          </div>
+          <div class="option-card" onclick="showForm('agent')">
+            <div class="option-icon-container">
+              <i class="fas fa-user"></i>
+            </div>
+            <h3>Real Estate Agent</h3>
+            <p>Connect with clients and grow your business</p>
+          </div>
+        </div>
+
+        <!-- Property Owner Form -->
+        <form id="propertyOwnerForm" class="dialog-form hidden">
+          <div class="form-group">
+            <label for="ownerName">Owner Name</label>
+            <input type="text" id="ownerName" required placeholder="Enter your full name">
+          </div>
+          <div class="form-group">
+            <label for="ownerEmail">Email ID</label>
+            <input type="email" id="ownerEmail" required placeholder="Enter your email">
+          </div>
+          <div class="form-group">
+            <label for="ownerMobile">Mobile Number</label>
+            <input type="text" id="ownerMobile" required placeholder="Enter your mobile number">
+          </div>
+          <div class="form-group">
+            <label for="propertyLocation">Location of the Property</label>
+            <textarea id="propertyLocation" required placeholder="Enter property location details"></textarea>
+          </div>
+          <div class="form-buttons">
+            <button type="button" class="back-button" onclick="showOptions()">Back</button>
+            <button type="submit" class="submit-button">Submit</button>
+          </div>
+        </form>
+
+        <!-- Agent Form -->
+        <form id="agentForm" class="dialog-form hidden">
+          <div class="form-group">
+            <label for="agentName">Name</label>
+            <input type="text" id="agentName" required placeholder="Enter your full name">
+          </div>
+          <div class="form-group">
+            <label for="agentEmail">Email ID</label>
+            <input type="email" id="agentEmail" required placeholder="Enter your email">
+          </div>
+          <div class="form-group">
+            <label for="agentMobile">Mobile Number</label>
+            <input type="text" id="agentMobile" required placeholder="Enter your mobile number">
+          </div>
+          <div class="form-group">
+            <label for="operationArea">Area of Operation in Hyderabad/Telangana</label>
+            <textarea id="operationArea" required placeholder="Enter your area of operation"></textarea>
+          </div>
+          <div class="form-buttons">
+            <button type="button" class="back-button" onclick="showOptions()">Back</button>
+            <button type="submit" class="submit-button">Submit</button>
+          </div>
+        </form>
+
+        <!-- Thank You Message -->
+        <div id="thankYouMessage" class="thank-you hidden">
+          <h3>Thank You!</h3>
+          <p>Your submission has been received. We'll be in touch soon.</p>
+          <button class="close-button-centered" onclick="closeDialog()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast hidden">
+    <div class="toast-content">
+      <div class="toast-title">Submission Successful</div>
+      <div class="toast-message">Your information has been saved to our database.</div>
+    </div>
+  </div>
+
+  <script>
+    function scrollToHero() {
+      document.getElementById('hero-section').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function openDialog() {
+      document.getElementById('dialog-overlay').classList.add('active');
+      document.body.style.overflow = 'hidden'; // Prevent scrolling when dialog is open
+      showOptions();
+    }
+
+    function closeDialog() {
+      document.getElementById('dialog-overlay').classList.remove('active');
+      document.body.style.overflow = ''; // Re-enable scrolling
+      // Reset forms when closing
+      document.getElementById('propertyOwnerForm').reset();
+      document.getElementById('agentForm').reset();
+    }
+
+    function showOptions() {
+      // Update dialog title
+      document.getElementById('dialog-title').textContent = 'Choose an option to join our privilege list';
+      document.getElementById('dialog-description').textContent = 'Select the option that best describes your real estate needs';
+      
+      // Show options, hide forms and thank you message
+      document.getElementById('options-container').classList.remove('hidden');
+      document.getElementById('propertyOwnerForm').classList.add('hidden');
+      document.getElementById('agentForm').classList.add('hidden');
+      document.getElementById('thankYouMessage').classList.add('hidden');
+    }
+
+    function showForm(type) {
+      // Hide options
+      document.getElementById('options-container').classList.add('hidden');
+      
+      if (type === 'propertyOwner') {
+        // Update dialog title
+        document.getElementById('dialog-title').textContent = 'Property Owner Details';
+        document.getElementById('dialog-description').textContent = 'Please complete the form below';
+        
+        // Show property owner form
+        document.getElementById('propertyOwnerForm').classList.remove('hidden');
+        
+        // Set up form submission
+        document.getElementById('propertyOwnerForm').onsubmit = function(e) {
+          e.preventDefault();
+          handleFormSubmit();
+        };
+      } else if (type === 'agent') {
+        // Update dialog title
+        document.getElementById('dialog-title').textContent = 'Real Estate Agent Details';
+        document.getElementById('dialog-description').textContent = 'Please complete the form below';
+        
+        // Show agent form
+        document.getElementById('agentForm').classList.remove('hidden');
+        
+        // Set up form submission
+        document.getElementById('agentForm').onsubmit = function(e) {
+          e.preventDefault();
+          handleFormSubmit();
+        };
+      }
+    }
+
+    function handleFormSubmit() {
+      // Hide forms, show thank you message
+      document.getElementById('propertyOwnerForm').classList.add('hidden');
+      document.getElementById('agentForm').classList.add('hidden');
+      document.getElementById('thankYouMessage').classList.remove('hidden');
+      
+      // Show toast notification
+      showToast('Submission Successful', 'Your information has been saved to our database.');
+    }
+
+    function showToast(title, message) {
+      const toast = document.getElementById('toast');
+      document.querySelector('.toast-title').textContent = title;
+      document.querySelector('.toast-message').textContent = message;
+      
+      toast.classList.remove('hidden');
+      
+      setTimeout(() => {
+        toast.classList.add('fade-out');
+        setTimeout(() => {
+          toast.classList.add('hidden');
+          toast.classList.remove('fade-out');
+        }, 300);
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
